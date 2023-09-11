@@ -51,20 +51,27 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="0">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Tooling Guide</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Tooling Guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="internationalization.html">Add i18n support to a project</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="table-generation.html">Generating a table component</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="table-custom-column.html">Generating a table with custom columns</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="types.html">Generating Interfaces</a>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="card-generation.html">Generating a card which you can add a custom content template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="types.html">Generating interfaces</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -82,6 +89,9 @@
       <ul class="versions">
         <li class="version is-latest">
           <a href="../../ame-guide/introduction.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../ame-guide/4.5.0/introduction.html">4.5.0</a>
         </li>
         <li class="version">
           <a href="../../ame-guide/4.4.1/introduction.html">4.4.1</a>
@@ -112,6 +122,9 @@
           <a href="../../esmf-developer-guide/index.html">master</a>
         </li>
         <li class="version">
+          <a href="../../esmf-developer-guide/2.2.3/index.html">2.2.3</a>
+        </li>
+        <li class="version">
           <a href="../../esmf-developer-guide/2.2.2/index.html">2.2.2</a>
         </li>
       </ul>
@@ -123,7 +136,10 @@
           <a href="../index.html">master</a>
         </li>
         <li class="version">
-          <a href="../2.0.0/index.html">2.0.0</a>
+          <a href="../2.4.1/index.html">2.4.1</a>
+        </li>
+        <li class="version">
+          <a href="../2.3.0/index.html">2.3.0</a>
         </li>
       </ul>
     </li>
@@ -156,6 +172,9 @@
           <a href="../../samm-specification/snapshot/index.html">snapshot</a>
         </li>
         <li class="version">
+          <a href="../../samm-specification/2.1.0/index.html">2.1.0</a>
+        </li>
+        <li class="version">
           <a href="../../samm-specification/2.0.0/index.html">2.0.0</a>
         </li>
       </ul>
@@ -172,7 +191,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">JavaScript SDK</a></li>
-    <li>Tooling Guide</li>
+    <li><a href="index.html">Tooling Guide</a></li>
     <li><a href="table-custom-column.html">Generating a table with custom columns</a></li>
   </ul>
 </nav>
@@ -180,7 +199,8 @@
   <button class="version-menu-toggle" title="Show other versions of page">master</button>
   <div class="version-menu">
     <a class="version is-current" href="table-custom-column.html">master</a>
-    <a class="version" href="../2.0.0/tooling-guide/table-custom-column.html">2.0.0</a>
+    <a class="version" href="../2.4.1/tooling-guide/table-custom-column.html">2.4.1</a>
+    <a class="version" href="../2.3.0/tooling-guide/table-custom-column.html">2.3.0</a>
   </div>
 </div>
   <div class="edit-this-page"><a href="https://github.com/eclipse-esmf/esmf-sdk-js-schematics/edit/main/documentation/js-sdk-guide/modules/tooling-guide/pages/table-custom-column.adoc">Edit this Page</a></div>
@@ -195,12 +215,12 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>The table UI representation for an Aspect Model per default renders the values
-as text. However, when creating the table using the schematic, you can let
-the schematic create additional, customizable columns.</p>
+as text. However, when creating the table using schematics, you can let
+schematics create additional, customizable columns.</p>
 </div>
 <div class="paragraph">
-<p>One way to render the content of the column is to use the Angular [ng-template
-directive](<a href="https://blog.angular-university.io/angular-ng-template-ng-container-ngtemplateoutlet/" class="bare">https://blog.angular-university.io/angular-ng-template-ng-container-ngtemplateoutlet/</a>), another
+<p>One way to render the content of the column is to use the Angular <a href="https://blog.angular-university.io/angular-ng-template-ng-container-ngtemplateoutlet/" target="_blank" rel="nofollow noopener">ng-template
+directive</a>, another
 way is to create a custom component to individually render the content of a column. The latter choice is
 recommended especially if business logic is involved for rendering the content.</p>
 </div>
@@ -211,7 +231,7 @@ recommended especially if business logic is involved for rendering the content.<
 <div class="sectionbody">
 <div class="paragraph">
 <p>The following example show how to implement and offer a column with graphical content
-using [Scalable Vector Graphics (SVG)](<a href="https://www.w3.org/Graphics/SVG/" class="bare">https://www.w3.org/Graphics/SVG/</a>).</p>
+using <a href="https://www.w3.org/Graphics/SVG/" target="_blank" rel="nofollow noopener">Scalable Vector Graphics (SVG)</a>.</p>
 </div>
 <div class="sect2">
 <h3 id="alternative-a-render-column-content-using-ng-template"><a class="anchor" href="#alternative-a-render-column-content-using-ng-template"></a>Alternative A: Render column content using ng-template</h3>

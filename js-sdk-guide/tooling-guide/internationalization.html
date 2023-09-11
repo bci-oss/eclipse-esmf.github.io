@@ -51,20 +51,27 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="0">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Tooling Guide</span>
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Tooling Guide</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="internationalization.html">Add i18n support to a project</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="table-generation.html">Generating a table component</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="table-custom-column.html">Generating a table with custom columns</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="types.html">Generating Interfaces</a>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="card-generation.html">Generating a card which you can add a custom content template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="types.html">Generating interfaces</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -82,6 +89,9 @@
       <ul class="versions">
         <li class="version is-latest">
           <a href="../../ame-guide/introduction.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../ame-guide/4.5.0/introduction.html">4.5.0</a>
         </li>
         <li class="version">
           <a href="../../ame-guide/4.4.1/introduction.html">4.4.1</a>
@@ -112,6 +122,9 @@
           <a href="../../esmf-developer-guide/index.html">master</a>
         </li>
         <li class="version">
+          <a href="../../esmf-developer-guide/2.2.3/index.html">2.2.3</a>
+        </li>
+        <li class="version">
           <a href="../../esmf-developer-guide/2.2.2/index.html">2.2.2</a>
         </li>
       </ul>
@@ -123,7 +136,10 @@
           <a href="../index.html">master</a>
         </li>
         <li class="version">
-          <a href="../2.0.0/index.html">2.0.0</a>
+          <a href="../2.4.1/index.html">2.4.1</a>
+        </li>
+        <li class="version">
+          <a href="../2.3.0/index.html">2.3.0</a>
         </li>
       </ul>
     </li>
@@ -156,6 +172,9 @@
           <a href="../../samm-specification/snapshot/index.html">snapshot</a>
         </li>
         <li class="version">
+          <a href="../../samm-specification/2.1.0/index.html">2.1.0</a>
+        </li>
+        <li class="version">
           <a href="../../samm-specification/2.0.0/index.html">2.0.0</a>
         </li>
       </ul>
@@ -172,7 +191,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">JavaScript SDK</a></li>
-    <li>Tooling Guide</li>
+    <li><a href="index.html">Tooling Guide</a></li>
     <li><a href="internationalization.html">Add i18n support to a project</a></li>
   </ul>
 </nav>
@@ -180,7 +199,8 @@
   <button class="version-menu-toggle" title="Show other versions of page">master</button>
   <div class="version-menu">
     <a class="version is-current" href="internationalization.html">master</a>
-    <a class="version" href="../2.0.0/tooling-guide/internationalization.html">2.0.0</a>
+    <a class="version" href="../2.4.1/tooling-guide/internationalization.html">2.4.1</a>
+    <a class="version" href="../2.3.0/tooling-guide/internationalization.html">2.3.0</a>
   </div>
 </div>
   <div class="edit-this-page"><a href="https://github.com/eclipse-esmf/esmf-sdk-js-schematics/edit/main/documentation/js-sdk-guide/modules/tooling-guide/pages/internationalization.adoc">Edit this Page</a></div>
@@ -195,7 +215,7 @@
 <h3 id="what-does-internationalization-mean"><a class="anchor" href="#what-does-internationalization-mean"></a>What does internationalization mean?</h3>
 <div class="paragraph">
 <p>Internationalization is the process of supporting multiple languages in your applications.
-This can be accomplished in an Angular application through third party libraries, such as ngx-translate, or you
+This can be accomplished in an Angular application through third-party libraries, such as <em>ngx-translate</em>, or you
 can use the built-in i18n functionality.</p>
 </div>
 <div class="paragraph">
@@ -206,7 +226,7 @@ without any other requirements.</p>
 <div class="sect2">
 <h3 id="adding-internationalization-to-an-angular-app-using-schematics"><a class="anchor" href="#adding-internationalization-to-an-angular-app-using-schematics"></a>Adding internationalization to an Angular app using schematics</h3>
 <div class="paragraph">
-<p>In the example, a brand-new application was generated using the command:</p>
+<p>Create a new Angular application using the command:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -220,13 +240,13 @@ without any other requirements.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Before running any schematic command make sure you are in the Angular project folder with an <code>angular.json</code> configuration file.
+Before running any schematics command make sure you are in the Angular project folder with an <code>angular.json</code> configuration file.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>In the demo-schematics project folder run:</p>
+<p>In the <code>demo-schematics</code> project folder run:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -234,7 +254,7 @@ Before running any schematic command make sure you are in the Angular project fo
 </div>
 </div>
 <div class="paragraph">
-<p>Afterwards the project is ready to offer translated a UI using <a href="https://github.com/ngx-translate">ngx-translate</a>.</p>
+<p>Afterwards the project can translate a UI using <a href="https://github.com/ngx-translate" target="_blank" rel="nofollow noopener">ngx-translate</a>.</p>
 </div>
 </div>
 </article>
