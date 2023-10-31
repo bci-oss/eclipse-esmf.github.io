@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Namespaces and Versions :: Eclipse Semantic Modeling Framework (ESMF)</title>
     <link rel="canonical" href="https://eclipse-esmf.github.io/samm-specification/snapshot/namespaces.html">
-    <meta name="generator" content="Antora 2.3.4">
+    <meta name="generator" content="Antora 3.0.0">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
 <link rel="apple-touch-icon" sizes="180x180" href="../../_/img/apple-touch-icon.png">
@@ -151,19 +151,10 @@
           <a href="../../ame-guide/introduction.html">master</a>
         </li>
         <li class="version">
-          <a href="../../ame-guide/4.5.0/introduction.html">4.5.0</a>
+          <a href="../../ame-guide/4.6.0/introduction.html">4.6.0</a>
         </li>
         <li class="version">
-          <a href="../../ame-guide/4.4.1/introduction.html">4.4.1</a>
-        </li>
-        <li class="version">
-          <a href="../../ame-guide/4.4.0/introduction.html">4.4.0</a>
-        </li>
-        <li class="version">
-          <a href="../../ame-guide/4.3.0/introduction.html">4.3.0</a>
-        </li>
-        <li class="version">
-          <a href="../../ame-guide/4.2.1/introduction.html">4.2.1</a>
+          <a href="../../ame-guide/4.5.3/introduction.html">4.5.3</a>
         </li>
       </ul>
     </li>
@@ -182,6 +173,12 @@
           <a href="../../esmf-developer-guide/index.html">master</a>
         </li>
         <li class="version">
+          <a href="../../esmf-developer-guide/2.4.1/index.html">2.4.1</a>
+        </li>
+        <li class="version">
+          <a href="../../esmf-developer-guide/2.4.0/index.html">2.4.0</a>
+        </li>
+        <li class="version">
           <a href="../../esmf-developer-guide/2.3.2/index.html">2.3.2</a>
         </li>
         <li class="version">
@@ -189,9 +186,6 @@
         </li>
         <li class="version">
           <a href="../../esmf-developer-guide/2.2.3/index.html">2.2.3</a>
-        </li>
-        <li class="version">
-          <a href="../../esmf-developer-guide/2.2.2/index.html">2.2.2</a>
         </li>
       </ul>
     </li>
@@ -202,10 +196,7 @@
           <a href="../../js-sdk-guide/index.html">master</a>
         </li>
         <li class="version">
-          <a href="../../js-sdk-guide/2.4.1/index.html">2.4.1</a>
-        </li>
-        <li class="version">
-          <a href="../../js-sdk-guide/2.3.0/index.html">2.3.0</a>
+          <a href="../../js-sdk-guide/2.5.1/index.html">2.5.1</a>
         </li>
       </ul>
     </li>
@@ -282,7 +273,7 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>Identifiers for elements of the meta model <em>must</em> use the URN syntax
-<a href="appendix/bibliography.html#rfc2141" class="page">[rfc2141]</a> and the following schema:</p>
+<a href="appendix/bibliography.html#rfc2141" class="xref page">[rfc2141]</a> and the following schema:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -295,7 +286,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>element-type</strong>&#8201;&#8212;&#8201;a selector describing the kind of thing the URN describes, must be one of:</p>
+<p><strong>element-type</strong>&#8201;&#8212;&#8201;a selector describing the kind of thing the URN describes, <em>must</em> be one of:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -308,7 +299,7 @@
 <p><code>entity</code> - For Entities that are defined inside the scope of the meta model</p>
 </li>
 <li>
-<p><code>unit</code> - For the <a href="units.html#units" class="page">catalog of units and quantity kinds</a></p>
+<p><code>unit</code> - For the <a href="units.html#units" class="xref page">catalog of units and quantity kinds</a></p>
 </li>
 </ul>
 </div>
@@ -332,14 +323,14 @@ Y and Z being integers.</p>
 </li>
 <li>
 <p><code>urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#Measurement</code>&#8201;&#8212;&#8201;URN of the
-<a href="characteristics.html#measurement-characteristic" class="page">Measurement</a> Characteristic in Meta Model version 2.1.0</p>
+<a href="characteristics.html#measurement-characteristic" class="xref page">Measurement</a> Characteristic in Meta Model version 2.1.0</p>
 </li>
 <li>
 <p><code>urn:samm:org.eclipse.esmf.samm:entity:2.1.0#Point3D</code>&#8201;&#8212;&#8201;URN of the
-<a href="entities.html#point-3d" class="page">Point 3D</a> entity</p>
+<a href="entities.html#point-3d" class="xref page">Point 3D</a> entity</p>
 </li>
 <li>
-<p><code>urn:samm:org.eclipse.esmf.samm:unit:2.1.0#kilogram</code>&#8201;&#8212;&#8201;URN of the <a href="appendix/unitcatalog.html#unit-kilogram" class="page">Kilogram</a> unit</p>
+<p><code>urn:samm:org.eclipse.esmf.samm:unit:2.1.0#kilogram</code>&#8201;&#8212;&#8201;URN of the <a href="appendix/unitcatalog.html#unit-kilogram" class="xref page">Kilogram</a> unit</p>
 </li>
 </ul>
 </div>
@@ -414,34 +405,34 @@ and Z being integers.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The following rules apply to contexts that allow the use of CURIEs (Compact URI,
-<a href="appendix/bibliography.html#curie" class="page">[curie]</a>), i.e., the shortening of URIs by
+<a href="appendix/bibliography.html#curie" class="xref page">[curie]</a>), i.e., the shortening of URIs by
 pre-defining a short name for common parts of URIs in a local context (in particular, XML namespaces
-<a href="appendix/bibliography.html#xmlns" class="page">[xmlns]</a>,
+<a href="appendix/bibliography.html#xmlns" class="xref page">[xmlns]</a>,
 <a href="https://www.w3.org/TR/turtle/#sec-iri">@prefix</a> in RDF/Turtle
-<a href="appendix/bibliography.html#turtle" class="page">[turtle]</a> and
+<a href="appendix/bibliography.html#turtle" class="xref page">[turtle]</a> and
 <a href="https://www.w3.org/TR/sparql11-query/#QSynIRI">PREFIX</a> in SPARQL
-<a href="appendix/bibliography.html#sparql" class="page">[sparql]</a>):</p>
+<a href="appendix/bibliography.html#sparql" class="xref page">[sparql]</a>):</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The prefix "samm" shall be used for the URN <code>urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#</code></p>
+<p>The prefix "samm" <em>must</em> be used for the URN <code>urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#</code></p>
 </li>
 <li>
-<p>The prefix "samm-c" shall be used for the URN <code>urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#</code></p>
+<p>The prefix "samm-c" <em>must</em> be used for the URN <code>urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#</code></p>
 </li>
 <li>
-<p>The prefix "samm-e" shall be used for the URN <code>urn:samm:org.eclipse.esmf.samm:entity:2.1.0#</code></p>
+<p>The prefix "samm-e" <em>must</em> be used for the URN <code>urn:samm:org.eclipse.esmf.samm:entity:2.1.0#</code></p>
 </li>
 <li>
-<p>The prefix "unit" shall be used for the URN <code>urn:samm:org.eclipse.esmf.samm:unit:2.1.0#</code></p>
+<p>The prefix "unit" <em>must</em> be used for the URN <code>urn:samm:org.eclipse.esmf.samm:unit:2.1.0#</code></p>
 </li>
 <li>
-<p>The empty prefix (":" in RDF/Turtle) shall be used for the URN prefix of the current model scope, i.e.
+<p>The empty prefix (":" in RDF/Turtle) <em>must</em> be used for the URN prefix of the current model scope, i.e.
 everything up to and including the <code>#</code> of the model elements that are being defined</p>
 </li>
 <li>
-<p>For other elements, use prefixes that do not contain the string <code>samm</code>.</p>
+<p>For other elements, use prefixes that <em>must not</em> contain the string <code>samm</code>.</p>
 </li>
 </ul>
 </div>
@@ -475,8 +466,8 @@ everything up to and including the <code>#</code> of the model elements that are
 </footer>
 <script src="../../_/js/site.js"></script>
 <script src="../../_/js/vendor/lunr.min.js"></script>
-<script src="../../_/js/vendor/search.js" id="search-script" data-base-path="../.." data-page-path="/samm-specification/snapshot/namespaces.html"></script>
-<script async src="../../_/../search-index.js"></script>
+<script src="../../_/js/vendor/search-ui.js" id="search-script" data-site-root-path="../.." data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>
   </body>
 </html>
