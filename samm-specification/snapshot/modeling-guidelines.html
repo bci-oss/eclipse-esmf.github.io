@@ -173,19 +173,19 @@
           <a href="../../esmf-developer-guide/index.html">master</a>
         </li>
         <li class="version">
+          <a href="../../esmf-developer-guide/2.5.1/index.html">2.5.1</a>
+        </li>
+        <li class="version">
+          <a href="../../esmf-developer-guide/2.5.0/index.html">2.5.0</a>
+        </li>
+        <li class="version">
+          <a href="../../esmf-developer-guide/2.4.2/index.html">2.4.2</a>
+        </li>
+        <li class="version">
           <a href="../../esmf-developer-guide/2.4.1/index.html">2.4.1</a>
         </li>
         <li class="version">
           <a href="../../esmf-developer-guide/2.4.0/index.html">2.4.0</a>
-        </li>
-        <li class="version">
-          <a href="../../esmf-developer-guide/2.3.2/index.html">2.3.2</a>
-        </li>
-        <li class="version">
-          <a href="../../esmf-developer-guide/2.3.1/index.html">2.3.1</a>
-        </li>
-        <li class="version">
-          <a href="../../esmf-developer-guide/2.2.3/index.html">2.2.3</a>
         </li>
       </ul>
     </li>
@@ -930,28 +930,28 @@ Aspects each containing a single Collection.
 <p>Describes a Property whose value can have one of two possible types (a disjoint union). This
 Characteristic is special since it does not directly define a data type. The data type is defined in
 the two Characteristics which define the left and right value of the disjoint union. Also see
-<a href="characteristics.html#either-characteristic" class="xref page">Either</a>.</p>
+<a href="characteristics.html#either-characteristic" class="xref page">Either</a> and <a href="payloads.html#characteristics-payload-mappings" class="xref page">Payload mappings to JSON for Characteristics</a>.</p>
 </div>
 <div class="paragraph">
 <p>Example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-turtle hljs" data-lang="turtle">:Result a samm-c:Either ;
-   samm-c:left :ErrorCode ;
-   samm-c:right :SuccessCode .
+<pre class="highlightjs highlight"><code class="language-turtle hljs" data-lang="turtle">:speedProperty a samm:Property ;
+  samm:characteristic :Result .
 
-:ErrorCode a samm-c:SingleEntity ;
-   samm:dataType :ErrorEntity .
+:Result a samm-c:Either ;
+  samm-c:left :ErrorMessage ;
+  samm-c:right :SpeedValue .
 
-:SuccessCode a samm-c:SingleEntity ;
-   samm:dataType :SuccessEntity .
+:ErrorMessage a samm-c:SingleEntity ;
+  samm:dataType :ErrorEntity .
+
+:SpeedValue a samm-c:Quantifiable ;
+  samm:dataType xsd:integer .
 
 :ErrorEntity a samm:Entity ;
-   samm:properties ( :errorCode :errorDescription ) .
-
-:SuccessEntity a samm:Entity ;
-   samm:properties ( :status ) .</code></pre>
+   samm:properties ( :errorCode :errorDescription ) .</code></pre>
 </div>
 </div>
 </div>
