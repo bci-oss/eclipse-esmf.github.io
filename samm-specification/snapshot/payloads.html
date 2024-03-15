@@ -173,6 +173,9 @@
           <a href="../../esmf-developer-guide/index.html">master</a>
         </li>
         <li class="version">
+          <a href="../../esmf-developer-guide/2.6.0/index.html">2.6.0</a>
+        </li>
+        <li class="version">
           <a href="../../esmf-developer-guide/2.5.1/index.html">2.5.1</a>
         </li>
         <li class="version">
@@ -183,9 +186,6 @@
         </li>
         <li class="version">
           <a href="../../esmf-developer-guide/2.4.1/index.html">2.4.1</a>
-        </li>
-        <li class="version">
-          <a href="../../esmf-developer-guide/2.4.0/index.html">2.4.0</a>
         </li>
       </ul>
     </li>
@@ -216,6 +216,12 @@
       <ul class="versions">
         <li class="version is-latest">
           <a href="../../python-sdk-guide/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../python-sdk-guide/2.1.2/index.html">2.1.2</a>
+        </li>
+        <li class="version">
+          <a href="../../python-sdk-guide/2.1.1/index.html">2.1.1</a>
         </li>
         <li class="version">
           <a href="../../python-sdk-guide/2.1.0/index.html">2.1.0</a>
@@ -761,6 +767,19 @@ or an <code>Error</code>, if the value could not be determined. <code>Error</cod
   }
 }</code></pre>
 </div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+If the model is invalid, it might be impossible to build a JSON payload that corresponds to the model.
+For example, if a Set of <code>xsd:boolean</code> values has a <a href="characteristics.html#length-constraint" class="xref page">Length Constraint</a> of <code>samm-c:minValue</code> 3, no valid payload can be constructed.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
